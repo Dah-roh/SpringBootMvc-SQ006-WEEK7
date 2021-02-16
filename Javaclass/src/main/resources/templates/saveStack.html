@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"  lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/saveStack}" th:object ="${stack}" method="post">
+<label>Name</label>
+    <input type="text" th:field="*{name}">
+<!--    <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>-->
+
+    <label> Squad</label>
+    <input type="text" th:field="*{squad}">
+<!--    <span th:if="${#fields.hasErrors('squad')}" th:errors="*{squad}"></span>-->
+    <input type="submit" value="Save Stack">
+
+</form>
+
+
+</body>
+</html>
